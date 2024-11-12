@@ -1,4 +1,5 @@
 import 'package:ed_tech_admin/features/dashboard/view/screens/dashboard.dart';
+import 'package:ed_tech_admin/features/daysAndActivities/view/screens/view_activity.dart';
 import 'package:ed_tech_admin/features/daysAndActivities/view/screens/view_all_activities_in_day_screen.dart';
 import 'package:ed_tech_admin/features/daysAndActivities/view/screens/view_all_days_screen.dart';
 import 'package:ed_tech_admin/features/daysAndActivities/view/screens/view_all_questions_in_activity.dart';
@@ -36,6 +37,10 @@ List<GetPage> appRoutes = [
   GetPage(
     name: '/days/:id/activities/all',
     page: () => ViewAllActivitiesInDayScreen(),
+  ),
+  GetPage(
+    name: '/days/activity/:id',
+    page: () => ViewActivity(),
   ),
   GetPage(
     name: '/days/activities/:id/questions',

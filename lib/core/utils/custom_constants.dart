@@ -16,7 +16,7 @@ Color randomColor() => RandomColor.getColorObject(Options(
 TextStyle kCommonHeading() =>
     TextStyle(fontSize: 22, fontWeight: FontWeight.w900);
 
-AppBar KCommonAppBar({required String title, Function()? onCreate}) {
+AppBar KCommonAppBar({required String title, Function()? onCreate, String? actionLabel, Widget? extraAction}) {
   return AppBar(
     toolbarHeight: 80,
     centerTitle: true,
@@ -45,8 +45,12 @@ AppBar KCommonAppBar({required String title, Function()? onCreate}) {
         if (onCreate != null)
           ElevatedButton(
             onPressed: onCreate,
-            child: Text('Create'),
-          )
+            child: Text(actionLabel == null?'Create': actionLabel),
+          ),
+          if(extraAction != null)
+          Row(children: [        SizedBox(width: 20),
+          extraAction
+],)
       ],
     ),
   );

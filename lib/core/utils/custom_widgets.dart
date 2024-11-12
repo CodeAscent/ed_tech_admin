@@ -36,6 +36,7 @@ class CustomTextFieldWithLabel extends StatelessWidget {
             if (controller!.text == '') {
               customSnackbar(
                   'Please enter a valid $label', ContentType.failure);
+              return '';
             } else {
               return null;
             }

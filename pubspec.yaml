@@ -42,6 +42,7 @@ dependencies:
   logger: ^2.4.0
   shared_preferences: ^2.3.3
   flutter_randomcolor: ^1.0.16
+  flutter_widget_from_html: ^0.15.2
 
 dev_dependencies:
   flutter_test:
